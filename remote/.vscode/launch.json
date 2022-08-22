@@ -1,0 +1,27 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/target/debug/${workspaceFolderBasename}.exe",
+            "args": ["RUST_LOG=debug"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [{"name": "RUST_LOG", "value": "info"}, {"name": "RUST_BACKTRACE", "value": "1"}],
+            "externalConsole": true,
+            "preLaunchTask": "rust: cargo build"
+        },
+        {
+            "name": "(OSX) Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceRoot}/target/debug/${workspaceFolderBasename}",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "rust: cargo build"
+        }
+    ]
+}

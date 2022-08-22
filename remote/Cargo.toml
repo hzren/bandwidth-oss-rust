@@ -1,0 +1,15 @@
+[package]
+name = "remote"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+common = { path = "../common" }
+tokio = { version = "1.18.2", features = ["full"] }
+fast-socks5 = "0.8.0"
+log = "0.4.0"
+env_logger = "0.8.4"
+tokio-stream = "0.1.8"
+bytes = "1.1.0"
